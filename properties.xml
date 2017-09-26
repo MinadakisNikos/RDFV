@@ -1,0 +1,29 @@
+<xproperties>
+	<virtuoso_host>vhost</virtuoso_host>
+    <preference>
+        <type_uri>crm:Actor</type_uri>
+        <weighted_property>
+            <property_uri>crm:is_identified_by</property_uri>
+			<property_weight>2</property_weight>
+        </weighted_property>
+		  <weighted_property>
+            <property_uri>crm:preffered_id</property_uri>
+			<property_weight>1</property_weight>
+        </weighted_property>
+    </preference>
+    <preference>
+        <type_uri>crm:Date</type_uri>
+        <weighted_property>
+            <property_uri>crm:has_timespan</property_uri>
+			<property_weight>1</property_weight>
+        </weighted_property>
+		<weighted_property>
+            <property_uri>crm:is_made_of</property_uri>
+			<property_weight>3</property_weight>
+        </weighted_property>
+		<weighted_property>
+            <property_uri>crm:has_type</property_uri>
+			<property_weight>2</property_weight>
+        </weighted_property>
+    </preference>
+</xproperties>
