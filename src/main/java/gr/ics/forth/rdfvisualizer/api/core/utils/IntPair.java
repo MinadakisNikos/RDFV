@@ -1,4 +1,4 @@
-package gr.ics.forth.redfvisualizer.api.core.utils;
+package gr.ics.forth.rdfvisualizer.api.core.utils;
 
 import java.util.Objects;
 
@@ -8,20 +8,20 @@ import java.util.Objects;
  * @author Nikos Minadakis (minadakn 'at' ics 'dot' forth 'dot' gr)
  * @author Yannis Marketakis (marketak 'at' ics 'dot' forth 'dot' gr)
  */
-public class Pair {
+public class IntPair {
     private String key;
-    private String value;
+    private int value;
        
-    public Pair(){
+    public IntPair(){
         this.key="";
-        this.value="";
+        this.value=0;
     }
     
-    public static Pair of(String key, String value){
-        return new Pair(key,value);
+    public static IntPair of(String key,  int value){
+        return new IntPair(key,value);
     }
     
-    public Pair(String key, String value){
+    public IntPair(String key, int value){
         this.key=key;
         this.value=value;
     }
@@ -34,11 +34,11 @@ public class Pair {
         this.key = key;
     }
 
-    public String getPairValue() {
+    public  int getPairValue() {
         return value;
     }
 
-    public void setPairValue(String value) {
+    public void setPairValue( int value) {
         this.value = value;
     }
     
@@ -49,9 +49,9 @@ public class Pair {
     
     @Override
     public boolean equals(Object anotherObject){
-        if(anotherObject instanceof Pair){
-            Pair anotherPair=(Pair)anotherObject;
-            return this.key.equals(anotherPair.getPairKey()) && this.value.equals(anotherPair.getPairValue());
+        if(anotherObject instanceof IntPair){
+            IntPair anotherPair=(IntPair)anotherObject;
+            return this.key.equals(anotherPair.getPairKey()) && (this.value==anotherPair.getPairValue());
         }else{
             return false;
         }

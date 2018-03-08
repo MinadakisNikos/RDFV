@@ -6,8 +6,8 @@
 package gr.ics.forth.rdfvisualizer.api.core.impl;
 
 
-import gr.ics.forth.redfvisualizer.api.core.utils.RDFTriple;
-import gr.ics.forth.redfvisualizer.api.core.utils.Triple;
+import gr.ics.forth.rdfvisualizer.api.core.utils.RDFTriple;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Triple;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

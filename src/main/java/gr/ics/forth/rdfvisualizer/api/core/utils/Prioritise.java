@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gr.ics.forth.redfvisualizer.api.core.utils;
+package gr.ics.forth.rdfvisualizer.api.core.utils;
 
 import java.util.Comparator;
 import java.util.HashMap;

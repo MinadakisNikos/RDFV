@@ -5,8 +5,8 @@
  */
 package gr.ics.forth.rdfvisualizer.api.core.impl;
 
-import gr.ics.forth.redfvisualizer.api.core.utils.Pair;
-import gr.ics.forth.redfvisualizer.api.core.utils.Triple;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Pair;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Triple;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -186,7 +186,11 @@ public class TripleStoreManagerWorking {
         
         System.out.println("labels"+labelPropertiesParam);
      
-        String queryString =     
+          String queryString =  "" ;
+        
+        
+        if(!graph.isEmpty()){
+        queryString =     
            "Select * from <"+graph+"> \n"+
             "where\n"+
             "{ {\n"+
@@ -215,7 +219,45 @@ public class TripleStoreManagerWorking {
             "  \n"+
             "FILTER(isLiteral(?o))\n"+
                   " FILTER (?p!=<http://collection.britishmuseum.org/id/ontology/PX_object_type>) "+
-            "} }\n";      
+            "} }\n";     
+        }
+        
+        else
+        {
+             queryString =     
+           "Select * from <"+graph+"> \n"+
+            "where\n"+
+            "{ {\n"+
+            "<"+resource+"> ?p ?o .\n"+
+            "<"+resource+">  rdf:type ?stype .\n"+
+            "OPTIONAL {<"+resource+">  \n"+
+            labelPropertiesParam +"  ?slabel }.\n"+
+
+            "OPTIONAL {?p "+labelPropertiesParam +" ?plabel }.\n"+
+            "OPTIONAL {?o "+labelPropertiesParam +"  ?olabel }.\n"+
+
+            "OPTIONAL {?o rdf:type ?otype} .\n"+
+                  " FILTER (?p!=<http://collection.britishmuseum.org/id/ontology/PX_object_type>) "+
+            "} \n"+
+
+            "UNION\n"+
+            "{ \n"+
+            "<"+resource+"> ?p ?o \n"+
+            ".\n"+
+            "<"+resource+">  rdf:type ?stype .\n"+
+             "OPTIONAL {<"+resource+">  \n"+
+            labelPropertiesParam +"  ?slabel }.\n"+
+            " OPTIONAL{?o "+labelPropertiesParam +"  ?olabel }.\n"+
+            "OPTIONAL {?p "+labelPropertiesParam +"  ?plabel }.\n"+
+        
+            "  \n"+
+            "FILTER(isLiteral(?o))\n"+
+                  " FILTER (?p!=<http://collection.britishmuseum.org/id/ontology/PX_object_type>) "+
+           "} }\n";     
+        }
+        
+        
+        
         return queryString;
 
     }

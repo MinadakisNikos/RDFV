@@ -7,8 +7,8 @@ package gr.ics.forth.rdfvisualizer.api.core.impl;
 
 import com.bigdata.rdf.sail.remote.BigdataSailRemoteRepository;
 import com.bigdata.rdf.sail.remote.BigdataSailRemoteRepositoryConnection;
-import gr.ics.forth.redfvisualizer.api.core.utils.Pair;
-import gr.ics.forth.redfvisualizer.api.core.utils.Triple;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Pair;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Triple;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

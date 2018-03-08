@@ -16,10 +16,10 @@ import gr.ics.forth.rdfvisualizer.api.core.properties.WeightedProperty;
 
 import gr.ics.forth.rdfvisualizer.api.core.properties.XMLPropertyReader;
 import gr.ics.forth.rdfvisualizer.api.core.properties.XSTREAMpropertyReader;
-import gr.ics.forth.redfvisualizer.api.core.utils.IntPair;
-import gr.ics.forth.redfvisualizer.api.core.utils.Pair;
-import gr.ics.forth.redfvisualizer.api.core.utils.Prioritise;
-import gr.ics.forth.redfvisualizer.api.core.utils.Triple;
+import gr.ics.forth.rdfvisualizer.api.core.utils.IntPair;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Pair;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Prioritise;
+import gr.ics.forth.rdfvisualizer.api.core.utils.Triple;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

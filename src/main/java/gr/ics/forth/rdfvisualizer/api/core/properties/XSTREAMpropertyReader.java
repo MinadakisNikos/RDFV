@@ -9,7 +9,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import gr.ics.forth.rdfvisualizer.api.example.TestPrioritise;
-import gr.ics.forth.redfvisualizer.api.core.utils.IntPair;
+import gr.ics.forth.rdfvisualizer.api.core.utils.IntPair;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
