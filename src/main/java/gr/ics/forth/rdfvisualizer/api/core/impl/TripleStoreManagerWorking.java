@@ -225,7 +225,7 @@ public class TripleStoreManagerWorking {
         else
         {
              queryString =     
-           "Select * from <"+graph+"> \n"+
+           "Select *  \n"+
             "where\n"+
             "{ {\n"+
             "<"+resource+"> ?p ?o .\n"+
