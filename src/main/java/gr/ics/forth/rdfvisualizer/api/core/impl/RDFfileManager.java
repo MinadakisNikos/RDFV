@@ -348,10 +348,10 @@ public class RDFfileManager {
         ResultSet sparqlResults = query(query);
         
         String label = "";
-        System.out.println("ofiofiofi");
+       
                for ( ; sparqlResults.hasNext() ; )
         {
-            System.out.println("tralala");
+          
            QuerySolution soln = sparqlResults.nextSolution();
            // System.out.println("LABEL: "+result.toString());
            label = soln.get("label").toString();
